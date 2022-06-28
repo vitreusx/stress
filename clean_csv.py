@@ -1,5 +1,5 @@
 import pandas as pd
-import args
+import argparse
 import os
 
 args.add_argument('csv_name', help='Name of the csv file to clean.')
