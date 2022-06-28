@@ -48,9 +48,13 @@ def clean_transcription(phrase, change_to_latin=True):
               last_vowel = '#'
           if last_fricative_nonpalatalized and last_vowel == "и":
               last_vowel = 'ы'
-          clean_phrase += vowels_to_latin[last_vowel] if change_to_latin else last_vowel
+          clean_phrase += get_latin(last_vowel) if change_to_latin else get_vowel(get_latin(last_vowel))
           last_vowel = None
-      last_fricative_nonpalatalized = a in fricative_nonpalatalized
+      last_fricative_nonpalatalized = a in fricative_nonpalatalized  # TODO: Check if this variable really has effect. It seems that it doesn't work.
       if a in vowels_to_latin.keys():
           last_vowel = a
   return clean_phrase
+
+def add_stresses(phrase, pred):
+  return
+  # TODO: write a function which will add stresses to a phrase based on the model output

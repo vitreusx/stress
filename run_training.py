@@ -58,7 +58,7 @@ training_args.num_train_epochs = num_train_epochs
 training_args.overwrite_output_dir = overwrite_output_dir  # If we don't want to keep the less trained model, it's good to just overwrite the current model directory
 #training_args.save_strategy = 'epoch'  # Default save strategy is 'steps'. If we use 'epoch' instead, a model checkpoint will be saved in the end of every epoch.
 #training_args.save_steps = 100  # Works only if save strategy is 'steps'. Default value is 500.
-#training_args.ignore_data_skip = True  # It seems reasonable to use this option when changing the batch_size but somehow when I set it to True, it didn't work.
+#training_args.ignore_skip_dat = True
 
 tokens = ['q', 'w', 'e', 'r', 't', 'y', 'u']
 token_set = TokenSet(tokens)
