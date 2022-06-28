@@ -29,7 +29,7 @@ def delete_nonexistent(dataframe):
     return delete_nonexistent(dataframe)
 
 
-def drop_duplicates_and_overwrite(dataframe)
+def drop_duplicates_and_overwrite(dataframe):
     df_len = len(dataframe.index)
     dataframe.drop_duplicates(subset='filename', inplace=True)
     nondup_len = len(dataframe.index)
